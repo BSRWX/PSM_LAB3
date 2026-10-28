@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
 
 @Composable
 fun JokeScreen(modifier: Modifier = Modifier) {
-    var jokeCount by remember { mutableIntStateOf(5) }
+    var jokeCount by remember { mutableIntStateOf(0) }
     var currentJokeIndex by remember { mutableIntStateOf(0) }
 
     val jokes = stringArrayResource(R.array.jokes_array)
@@ -52,6 +52,7 @@ fun JokeScreen(modifier: Modifier = Modifier) {
     val isSystem = currentLocales.isEmpty()
     val isPl = currentLocales == "pl"
     val isEn = currentLocales == "en"
+    val isPseudo = currentLocales == "en-XA"
 
     val primaryTeal = Color(0xFF006D40)
     val cardBackground = Color(0xFF666666)
@@ -75,15 +76,15 @@ fun JokeScreen(modifier: Modifier = Modifier) {
         Row(
             horizontalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            if (isSystem) {
+            if (isPseudo) {
                 Button(onClick = { }, colors = ButtonDefaults.buttonColors(containerColor = primaryTeal)) {
-                    Text(stringResource(id = R.string.system_language))
+                    Text("Pseudo")
                 }
             } else {
                 OutlinedButton(onClick = {
-                    AppCompatDelegate.setApplicationLocales(LocaleListCompat.getEmptyLocaleList())
+                    AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags("en-XA"))
                 }) {
-                    Text(stringResource(id = R.string.system_language), color = Color.Gray)
+                    Text("Pseudo", color = Color.Gray)
                 }
             }
 
