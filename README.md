@@ -9,7 +9,7 @@ Główny widok aplikacji w obu obsługiwanych językach (polskim i angielskim).
 
 | Wersja polska | Wersja angielska | 
 | :---: | :---: | 
-| ![PL](pl_version.png) | ![EN](en_version.png) | 
+| ![PL](screeny/pl_version.png) | ![EN](screeny/en_version.png) | 
 
 ## 2. Obsługa liczby mnogiej (Plurals)
 
@@ -17,13 +17,13 @@ Język polski wymaga obsługi wielu form gramatycznych w zależności od liczby.
 
 | Forma "żartów" / "żart" | Forma "żarty" | Wersja angielska (Plurals) |
 | :---: | :---: | :---: |
-| ![Żartów](plurals_zart.png) | ![Żarty](plurals_zarty.png) | ![EN Plurals](en_plurals.png) | 
+| ![Żartów](screeny/plurals_zart.png) | ![Żarty](screeny/plurals_zarty.png) | ![EN Plurals](screeny/en_plurals.png) | 
 
 ## 3. Test gotowości na tłumaczenie (Pseudojęzyk en-XA)
 
 | Aplikacja w pseudojęzyku | 
 | :---: | 
-| ![Pseudojęzyk](pseudo_locale.png) | 
+| ![Pseudojęzyk](screeny/pseudo_locale.png) | 
 
 **Wnioski i potrzebne poprawki po teście (en-XA):**
 1. **Pasek wyboru języka:** Teksty przycisków ("Polski", "English") rozszerzają się. Może to powodować nachodzenie na siebie elementów lub łamanie wiersza (wymagany układ elastyczny np. `FlowRow`).
